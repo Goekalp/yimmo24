@@ -1,18 +1,117 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container--col">
+    <div class="landing container--row">
+      <div class="grid">
+        <div class="grid__item container--col">
+          <h1 class="header-1">Überschrift</h1>
+          <h2 class="header-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex ut quae
+            perspiciatis in explicabo unde cumque nihil inventore necessitatibus
+            aperiam adipisci, accusamus molestias, porro maxime ratione. Sunt
+            inventore commodi eveniet.
+          </h2>
+          <div class="search container--row">
+            <input placeholder="Search" class="search__input" type="text" />
+            <button class="search__button">Search</button>
+          </div>
+        </div>
+        <div class="frame">
+          <img
+            class="frame__img"
+            src="https://www.gussek-haus.de/fileadmin/user_upload/Fertighaeuser-Haeuser/Kundenhaeuser/Luxushaus/Cannstatt/luxushaus-cannstatt-001-zeltdach-erker.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container"></div>
+    <div class="container"></div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+<style lang="scss" scoped>
+.container--col {
+  display: flex;
+  flex-direction: column;
+}
+.container--row {
+  display: flex;
+  flex-direction: row;
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 
-export default {
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-};
-</script>
+  &__item {
+    margin: 0 5em;
+  }
+}
+.header-1 {
+  align-self: flex-start;
+  color: var(--color-white-1);
+  font-size: 40px;
+  font-weight: bold;
+  margin: 1em 0;
+}
+.header-2 {
+  align-self: flex-start;
+  color: var(--color-white-2);
+  font-size: 15px;
+  margin: 0.5em;
+  text-align: left;
+}
+.landing {
+  background-color: var(--color-text);
+  padding: 3em 10em;
+  box-sizing: border-box;
+  height: 70vh;
+  align-items: center;
+}
+.search {
+  align-self: flex-start;
+  background-color: white;
+  align-items: center;
+  margin: 2rem 0rem;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+  border-radius: 7px;
+  width: 100%;
+
+  &__button {
+    background: var(--color-blue-1);
+    border: none;
+    height: 2.5rem;
+    width: 7rem;
+    color: var(--color-white-1);
+    border-radius: 7px;
+    transition: 0.5s background-color ease;
+    cursor: pointer;
+  }
+  &__button:hover {
+    background-color: var(--color-blue-2);
+  }
+
+  &__input {
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    border: none;
+    font-size: 1.3em;
+    font-weight: 530;
+  }
+  &__input:focus-visible {
+    outline: none;
+  }
+}
+
+.frame {
+  //overflow: hidden;
+
+  &__img {
+    border-radius: 100px 10px 100px 10px;
+    max-width: 100%;
+    margin-bottom: -200px;
+  }
+}
+</style>

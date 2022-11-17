@@ -13,7 +13,9 @@
           <router-link to="/" class="navbar__links__item__a">Home</router-link>
         </li>
         <li class="navbar__links__item">
-          <router-link to="/" class="navbar__links__item__a">Home</router-link>
+          <router-link to="/about" class="navbar__links__item__a"
+            >Home</router-link
+          >
         </li>
         <li class="navbar__links__item">
           <router-link to="/" class="navbar__links__item--highlight"
@@ -30,8 +32,11 @@
 <style lang="scss">
 :root {
   --color-primary: #ff731d;
+  --color-blue-1: #5f9df7;
+  --color-blue-2: #1746a2;
   --color-text: #2c3e50;
   --color-white-1: #ffffff;
+  --color-white-2: #adadad;
 }
 
 body {
@@ -88,7 +93,7 @@ body {
       }
 
       &--highlight {
-        background: #5f9df7;
+        background: var(--color-blue-1);
         margin-left: 10px;
         padding: 15px 40px;
 
