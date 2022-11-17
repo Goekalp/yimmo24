@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <nav class="navbar">
-      <router-link class="navbar__brand" to="/">Home</router-link>
-      <ul class="navbar__links">
-        <li class="navbar__links__item">
-          <router-link to="/" class="navbar__links__item__a">Home</router-link>
+    <nav class="nav">
+      <router-link class="nav__brand" to="/">Home</router-link>
+      <ul class="nav__links">
+        <li class="nav__links__item">
+          <router-link to="/" class="nav__links__item__a">Home</router-link>
         </li>
-        <li class="navbar__links__item">
-          <router-link to="/" class="navbar__links__item__a">Home</router-link>
+        <li class="nav__links__item">
+          <router-link to="/" class="nav__links__item__a">Home</router-link>
         </li>
-        <li class="navbar__links__item">
-          <router-link to="/" class="navbar__links__item__a">Home</router-link>
+        <li class="nav__links__item">
+          <router-link to="/" class="nav__links__item__a">Home</router-link>
         </li>
-        <li class="navbar__links__item">
-          <router-link to="/about" class="navbar__links__item__a"
+        <li class="nav__links__item">
+          <router-link to="/about" class="nav__links__item__a"
             >Home</router-link
           >
         </li>
-        <li class="navbar__links__item">
-          <router-link to="/" class="navbar__links__item--highlight"
+        <li class="nav__links__item">
+          <router-link to="/" class="nav__links__item--highlight"
             >Contact</router-link
           >
         </li>
@@ -51,12 +51,15 @@ body {
   color: #2c3e50;
 }
 
-.navbar {
+.nav {
+  //position: sticky;
+  //top: 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 4.5rem;
+  height: 5rem;
   background: #fff7e9;
   padding: 0 2rem;
   box-sizing: border-box;

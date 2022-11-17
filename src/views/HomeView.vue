@@ -24,8 +24,9 @@
         </div>
       </div>
     </div>
-    <div class="container--row carousel">
-      <b-card-group>
+    <div class="container--col carousel">
+      <h1 class="header-1" black>Hier ein paar Karten</h1>
+      <div class="card-group">
         <b-card
           title="Title"
           img-src="https://picsum.photos/300/300/?image=41"
@@ -71,18 +72,20 @@
             <small class="text-muted">Last updated 3 mins ago</small>
           </template>
         </b-card>
-      </b-card-group>
+      </div>
     </div>
-    <div class="container"></div>
+    <div class="container--col footer">
+      <p>Footer</p>
+    </div>
   </div>
 </template>
 <script>
-import { BCard, BCardGroup, BCardText } from "bootstrap-vue";
+import { BCard, BCardText } from "bootstrap-vue";
 
 export default {
   components: {
     "b-card": BCard,
-    "b-card-group": BCardGroup,
+    // "b-card-group": BCardGroup,
     "b-card-text": BCardText,
   },
 };
@@ -168,10 +171,27 @@ export default {
   &__img {
     border-radius: 100px 10px 100px 10px;
     max-width: 100%;
-    margin-bottom: -200px;
+    margin-bottom: -100px;
   }
 }
 .carousel {
-  height: 40vh;
+  padding: 10em 10em;
+  box-sizing: border-box;
+}
+
+[black] {
+  color: var(--color-text);
+}
+.card-group {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 100px;
+}
+.footer {
+  height: 15vh;
+  background: var(--color-text);
+  color: var(--color-white-1);
+  box-sizing: border-box;
+  padding: 3em 10em;
 }
 </style>
