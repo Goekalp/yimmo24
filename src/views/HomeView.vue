@@ -65,7 +65,6 @@
   background-color: var(--color-text);
   padding: 3em 10em;
   box-sizing: border-box;
-  height: 70vh;
   align-items: center;
 }
 .search {
