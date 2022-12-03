@@ -74,6 +74,59 @@
         </b-card>
       </div>
     </div>
+
+    <div class="value container--row">
+      <div class="grid">
+        <div class="grid__item container--col">
+          <div class="framevalue">
+            <img
+              class="framevalue__img"
+              src="https://cdn.pixabay.com/photo/2021/12/25/13/08/real-estate-6893060_960_720.jpg"
+              alt="Value Image Description"
+            />
+            <!--src=„require(….)“-->
+          </div>
+        </div>
+        <div class="grid__item container--col">
+          <h1 class="header-value">Our Value.</h1>
+          <h2 class="header-value-2">Value We Give To You.</h2>
+          <div class="valuecontent">
+            <div class="valuecontent__button">
+              <button class="valuecontent__button" @click="myFunction()">
+                Best interest rates on the market
+              </button>
+              <div class="inhaltvalue" id="myDIV">
+                Das ist der Inhalt der ein und ausgeblendet wird.
+              </div>
+            </div>
+            <div class="valuecontent__button">
+              <button class="valuecontent__button" @click="myFunction2()">
+                Prevent unstable prices
+              </button>
+              <div class="inhaltvalue" id="myDIV2">
+                Das ist der Inhalt der ein und ausgeblendet wird.
+              </div>
+            </div>
+            <div class="valuecontent__button">
+              <button class="valuecontent__button" @click="myFunction3()">
+                Best price on the market
+              </button>
+              <div class="inhaltvalue" id="myDIV3">
+                Das ist der Inhalt der ein und ausgeblendet wird.
+              </div>
+            </div>
+            <div class="valuecontent__button">
+              <button class="valuecontent__button" @click="myFunction4()">
+                Security of your data
+              </button>
+              <div class="inhaltvalue" id="myDIV4">
+                Das ist der Inhalt der ein und ausgeblendet wird.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container--col footer">
       <p>Footer</p>
     </div>
@@ -87,6 +140,28 @@ export default {
     "b-card": BCard,
     // "b-card-group": BCardGroup,
     "b-card-text": BCardText,
+  },
+  methods: {
+    myFunction() {
+      var element = document.getElementById("myDIV");
+      element.classList.toggle("mystyle");
+      element.classList.toggle("inhaltvalue");
+    },
+    myFunction2() {
+      var element2 = document.getElementById("myDIV2");
+      element2.classList.toggle("mystyle");
+      element2.classList.toggle("inhaltvalue");
+    },
+    myFunction3() {
+      var element3 = document.getElementById("myDIV2");
+      element3.classList.toggle("mystyle");
+      element3.classList.toggle("inhaltvalue");
+    },
+    myFunction4() {
+      var element4 = document.getElementById("myDIV2");
+      element4.classList.toggle("mystyle");
+      element4.classList.toggle("inhaltvalue");
+    },
   },
 };
 </script>
@@ -121,6 +196,22 @@ export default {
   font-size: 15px;
   margin: 0.5em;
   text-align: left;
+}
+.header-value {
+  align-self: flex-start;
+  color: var(--color-primary);
+  font-size: 30px;
+  margin: 0.5rem;
+  text-align: left;
+  font-weight: bold;
+}
+.header-value-2 {
+  align-self: flex-start;
+  color: var(--color-blue-2);
+  font-size: 50px;
+  margin: 0.5rem;
+  text-align: left;
+  font-weight: lighter;
 }
 .landing {
   background-color: var(--color-text);
@@ -164,6 +255,26 @@ export default {
     outline: none;
   }
 }
+.valuecontent {
+  //background: var(--color-blue-1);
+  border: none;
+  height: auto;
+  width: auto;
+  color: var(black);
+  border-radius: 2px;
+  transition: 0.2s background-color ease;
+  //cursor: pointer;
+
+  &__button {
+    border: none;
+    background-color: var(--color-blue-1);
+  }
+
+  &__hiddencontent {
+    display: hidden;
+    background: red;
+  }
+}
 
 .frame {
   //overflow: hidden;
@@ -174,6 +285,15 @@ export default {
     margin-bottom: -100px;
   }
 }
+
+.framevalue {
+  &__img {
+    border-radius: 150px 150px 5px 5px;
+    max-width: 100%;
+    margin-bottom: -100px;
+  }
+}
+
 .carousel {
   padding: 10em 10em;
   box-sizing: border-box;
@@ -193,5 +313,19 @@ export default {
   color: var(--color-white-1);
   box-sizing: border-box;
   padding: 3em 10em;
+}
+
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  transition: all 1s ease;
+  display: block;
+}
+.inhaltvalue {
+  display: none;
+  transition: all 3s;
 }
 </style>
