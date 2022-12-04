@@ -127,6 +127,32 @@
         </div>
       </div>
     </div>
+    <div class="gridcontainercontact">
+      <div class="item-1">
+        <h2 class="header-service">Kontakt</h2>
+        <p>0176 123 456 78</p>
+
+        <button class="button-service-highlight">Anrufen</button>
+      </div>
+      <div class="item-1">
+        <h2 class="header-service">Chat</h2>
+        <p>Whatsapp</p>
+
+        <button class="button-service">Whatsapp</button>
+      </div>
+      <div class="item-1">
+        <h2 class="header-service">Anfahrt</h2>
+        <p>10969 Berlin</p>
+
+        <button class="button-service">Route</button>
+      </div>
+      <div class="item-1">
+        <h2 class="header-service">E-Mail</h2>
+        <p>0176 123 456 78</p>
+
+        <button class="button-service">@ Mail</button>
+      </div>
+    </div>
     <div class="container--col footer">
       <p>Footer</p>
     </div>
@@ -153,12 +179,12 @@ export default {
       element2.classList.toggle("inhaltvalue");
     },
     myFunction3() {
-      var element3 = document.getElementById("myDIV2");
+      var element3 = document.getElementById("myDIV3");
       element3.classList.toggle("mystyle");
       element3.classList.toggle("inhaltvalue");
     },
     myFunction4() {
-      var element4 = document.getElementById("myDIV2");
+      var element4 = document.getElementById("myDIV4");
       element4.classList.toggle("mystyle");
       element4.classList.toggle("inhaltvalue");
     },
@@ -182,6 +208,45 @@ export default {
   &__item {
     margin: 0 5em;
   }
+}
+.gridcontainercontact {
+  display: grid;
+
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  gap: 20px;
+  color: #c30606;
+}
+.item-1 {
+  color: rgb(0, 0, 0);
+  background-color: #eef7fc;
+  padding: 25px;
+  border: 2px solid rgb(199, 199, 199);
+  margin: 10px;
+  border-radius: 30px 30px 30px 30px;
+}
+.button-service {
+  background-color: var(--color-blue-1);
+  border: none;
+  height: 2.5rem;
+  width: 7rem;
+  color: var(--color-white-1);
+  border-radius: 7px;
+  transition: 1s background-color ease;
+  cursor: pointer;
+}
+.button-service-highlight {
+  background-color: var(--color-blue-2);
+  border: none;
+  height: 2.5rem;
+  width: 7rem;
+  color: var(--color-white-1);
+  border-radius: 7px;
+  transition: 1s background-color ease;
+  cursor: pointer;
+}
+.header-service {
+  align-self: center;
 }
 .header-1 {
   align-self: flex-start;
