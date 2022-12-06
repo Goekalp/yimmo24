@@ -127,6 +127,10 @@
         </div>
       </div>
     </div>
+    <div>
+      <h1 class="header-value">Our Value</h1>
+      <h2 class="header-value-2">Easy to contact Us!</h2>
+    </div>
     <div class="gridcontainercontact">
       <div class="item-1">
         <h2 class="header-service">Kontakt</h2>
@@ -141,18 +145,31 @@
         <button class="button-service">Whatsapp</button>
       </div>
       <div class="item-1">
-        <h2 class="header-service">Anfahrt</h2>
-        <p>10969 Berlin</p>
-
-        <button class="button-service">Route</button>
+        <div class="framecontact">
+          <img
+            class="framecontact__img"
+            src="https://www.gussek-haus.de/fileadmin/user_upload/Fertighaeuser-Haeuser/Kundenhaeuser/Luxushaus/Cannstatt/luxushaus-cannstatt-001-zeltdach-erker.jpg"
+            alt=""
+          />
+        </div>
       </div>
       <div class="item-1">
         <h2 class="header-service">E-Mail</h2>
-        <p>0176 123 456 78</p>
+        <p>at-mustermann.de</p>
 
         <button class="button-service">@ Mail</button>
       </div>
+      <div class="item-1">
+        <h2 class="header-service">Anfahrt</h2>
+        <p>10969 Berlin</p>
+        <button class="button-service">Route</button>
+      </div>
     </div>
+
+    <div class="getstarted">
+      <h1 class="header-value-1">Get started with Yimmo24</h1>
+    </div>
+
     <div class="container--col footer">
       <p>Footer</p>
     </div>
@@ -212,10 +229,17 @@ export default {
 .gridcontainercontact {
   display: grid;
 
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
   gap: 20px;
+  border: 3px solid white;
+  margin: 100px 30px;
+  justify-content: center;
   color: #c30606;
+  grid-template-areas:
+    "eins eins zwei"
+    "drei vier zwei"
+    "fünf sechs zwei";
 }
 .item-1 {
   color: rgb(0, 0, 0);
@@ -359,6 +383,17 @@ export default {
   }
 }
 
+.framecontact {
+  &__img {
+    border-radius: 50em 150em 0px 0px;
+    max-width: 540px;
+    //float: right;
+    margin: -50px;
+    //display: inline-flex;
+    margin-bottom: -400px;
+  }
+}
+
 .carousel {
   padding: 10em 10em;
   box-sizing: border-box;
@@ -378,6 +413,12 @@ export default {
   color: var(--color-white-1);
   box-sizing: border-box;
   padding: 3em 10em;
+}
+.getstarted {
+  width: 100%;
+  color: var(--color-white-1);
+  background-color: var(--color-blue-2);
+  padding: 100px;
 }
 
 .mystyle {
